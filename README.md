@@ -255,6 +255,15 @@ python farmtech_yolo_inference.py --source path/to/image.jpg
 
 ---
 
+## 🎥 Vídeo Demonstração
+
+📹 **Assista à demonstração completa do projeto:**
+[**🎬 Video Trabalho FIAP - FarmTech YOLO**](https://youtu.be/8hON40HJnNc)
+
+> Vídeo apresentando o funcionamento completo do sistema de detecção de celulares, desde a análise do dataset até os resultados finais com YOLO e CNN customizada.
+
+---
+
 ### 🌟 **"FarmTech YOLO: Transformando Computer Vision em soluções práticas para o mundo real!"** 
 
 <p align="center">

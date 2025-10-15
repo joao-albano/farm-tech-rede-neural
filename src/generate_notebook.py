@@ -296,6 +296,7 @@ if IN_COLAB:
     ]
 else:
     POSSIBLE_PATHS = [
+        "../document/Cellphone.v1i.yolov5pytorch",
         "./Cellphone.v1i.yolov5pytorch",
         "../Cellphone.v1i.yolov5pytorch"
     ]
@@ -315,8 +316,8 @@ if DATASET_PATH is None:
     print("\\n📥 Para baixar o dataset:")
     print("1. Acesse: https://drive.google.com/drive/folders/1eNyD5c1piv-9Vpsxfp5xWPR-IlBxh7C0?usp=sharing")
     print("2. Baixe a pasta 'Cellphone.v1i.yolov5pytorch'")
-    print("3. Organize no caminho: /content/drive/MyDrive/FarmTech_Dataset/Cellphone.v1i.yolov5pytorch")
-    DATASET_PATH = "/content/Cellphone.v1i.yolov5pytorch"
+    print("3. Organize no caminho: ../document/Cellphone.v1i.yolov5pytorch")
+    DATASET_PATH = "../document/Cellphone.v1i.yolov5pytorch"
 
 PROJECT_NAME = "FarmTech_Cellphone_Detection"
 
@@ -549,7 +550,7 @@ def visualize_dataset(dataset_stats):
                            transform=axes[1, 1].transAxes)
         
         plt.tight_layout()
-         plt.show()
+        plt.show()
         
     except Exception as e:
         print(f"❌ Erro na visualização: {str(e)}")
@@ -734,10 +735,13 @@ names: ['mobile-phone']
             if not os.path.exists(self.dataset_path):
                 return {'error': f'Dataset não encontrado: {self.dataset_path}', 'epochs': epochs}
             
-            # Preparar config
-            config_path = self.prepare_config()
-            if not config_path:
-                return {'error': 'Falha na configuração', 'epochs': epochs}
+            # Usar config existente do dataset
+            config_path = os.path.join(self.dataset_path, "data.yaml")
+            if not os.path.exists(config_path):
+                # Preparar config como fallback
+                config_path = self.prepare_config()
+                if not config_path:
+                    return {'error': 'Falha na configuração', 'epochs': epochs}
             
             # Carregar modelo
             try:

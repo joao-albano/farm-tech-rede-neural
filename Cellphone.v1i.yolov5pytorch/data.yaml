@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['mobile-phone']
+
+roboflow:
+  workspace: lolli
+  project: cellphone-q8trb
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/lolli/cellphone-q8trb/dataset/1

@@ -4,20 +4,26 @@
 <a href= "https://www.fiap.com.br/"><img src="assets/logo-fiap.png" alt="FIAP - Faculdade de Informática e Admnistração Paulista" border="0" width=40% height=40%></a>
 </p>
 
-<br>
+<br><div align="center">
+
+<img src="assets/logo-fiap.png" alt="FIAP Logo" width="200"/>
 
 # FarmTech YOLO: Sistema Inteligente de Detecção de Celulares com Computer Vision
 
 ## Nome do grupo
 
 ## 👨‍🎓 Integrantes: 
+- Gabriella Serni Ponzetta – RM 566296
 - João Francisco Maciel Albano – RM 565985
+- Fernando Ricardo – RM 566501
+- Gabriel Schuler Barros – RM 564934
 
 ## 👩‍🏫 Professores:
 ### Tutor(a) 
-- Professor Responsável
+- Lucas Gomes Moreira
+- Leonardo Ruiz Orabona
 ### Coordenador(a)
-- Coordenador Acadêmico
+- André Godoi Chiovato
 
 ---
 
